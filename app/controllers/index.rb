@@ -15,6 +15,11 @@ get '/private' do
 
 end
 
+get '/logout' do
+  session[:message] = nil
+  redirect to('/')
+end
+
 
 post '/login' do
   # receive the user's input
